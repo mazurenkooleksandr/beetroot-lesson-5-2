@@ -49,12 +49,12 @@ li {
     height: 65px;
     border: 1px solid transparent;
     list-style-type: none;
-    padding-left: 10px;
+    padding-left: 5px;
     color: #fff;
     padding-top: 15px;
 }
 
-.box {
+input {
     width: 27px;
     height: 27px;
     vertical-align: middle;
@@ -68,11 +68,6 @@ li:nth-child(2n) {
     background-color: #7a7593;
 }
 
-input[type="checkbox"]:checked + label{
-    text-decoration: line-through;
-    color: #a19eb3;
-}
-
 li:hover {
     background-color: #625e77;
     border-top: 3px solid #fff;
@@ -83,15 +78,20 @@ li:active {
     background-color: #ff0000;
 }
 
-span::before {
+ input[type=checkbox]:checked ~ span {
+    text-decoration: line-through;
+    color: #a19eb3;
+}
+
+.mark::before {
     content: "(";
 }
 
-span::after {
+.mark::after {
     content: ")";
 }
 
-span {
+.mark {
     font-size: 16px;
     padding-left: 2px;
 }
